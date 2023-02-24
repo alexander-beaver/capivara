@@ -14,3 +14,4 @@ path="src/bin/server/bin.rs"
 
 [dependencies]
 winapi = { version = "0.3.9", features = ["std", "impl-default", "windef", "winuser"] }
+bincode = "^2.0.0-rc.2"

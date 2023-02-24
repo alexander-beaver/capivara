@@ -1,7 +1,0 @@
-trait CaviolinkBundle{
-
-}
-trait CaviolinkClient{
-
-}
-
