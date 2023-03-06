@@ -3,3 +3,7 @@ pub fn get_copyright() -> String{
     \n \
     https://alexbeaver.com");
 }
+
+pub fn modulo(a: u16, b: u16) -> u16{
+    return (a % b + b) % b;
+}

