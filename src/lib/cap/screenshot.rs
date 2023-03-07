@@ -25,6 +25,7 @@ let mut rect = RECT{
         height: h as u16,
         pixels: Vec::new()
     };
+    println!("Starting pixel loop");
     for i in 0..h{
         for j in 0..w{
             let mut pixel:u32 = 0;
@@ -33,6 +34,8 @@ let mut rect = RECT{
             image.pixels.push(pixel);
         }
     }
+    println!("Finished pixel loop");
+
     unsafe { wingdi::SelectObject(memdc, old_bmp) };
     unsafe { wingdi::DeleteObject(bmp as *mut _) };
     unsafe { wingdi::DeleteDC(memdc) };

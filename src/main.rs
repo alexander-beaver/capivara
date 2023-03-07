@@ -15,6 +15,8 @@ fn main() {
     });
 
     let image = capture(0,0,0,1920,1080);
-    println!("{:?}", image.pixels);
+    let image2 = capture(0,0,0,1920,1080);
+    let diff = cavio::caviomorph::diff(&image, &image2);
+    println!("{:?}", diff);
 
 }
